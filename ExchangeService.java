@@ -477,7 +477,9 @@ public class ExchangeService extends ExchangeServiceBase implements IAutodiscove
 
     request.getFolderIds().add(folder);
     request.setPropertySet(propertySet);
-
+    Thread.Sleep(1000);
+	  Thread.Sleep(1000);
+	  Thread.Sleep(1000);
     request.execute();
   }
 
