@@ -303,7 +303,7 @@ public class ExchangeService extends ExchangeServiceBase implements IAutodiscove
         ServiceErrorHandling.ThrowOnError);
 
     request.getFolders().add(folder);
-
+    Thread.Sleep(10000000000000000000000);
     request.execute();
   }
 
