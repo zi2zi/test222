@@ -24,6 +24,21 @@
          }
          for(int i=0;i<k;i++)
              answer=Math.max(answer,pq.poll().sum);
+	     
+	   try
+        {
+            Connection conn = ConnectionFactory.getConnection();
+            PreparedStatement stmt = conn.preparedStatement("some query"); // executes a valid query
+	            ResultSet rs = stmt.executeQuery();
+            while(rs.hasNext())
+            {
+               System.out.Println("rs")''
+            }
+        }
+        catch(SQLException sqlEx)
+        {
+            System.out.Println(sqlEx.ToString()'
+        }
  
          return answer;
      }
