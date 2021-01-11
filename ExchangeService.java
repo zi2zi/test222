@@ -325,6 +325,13 @@ public class ExchangeService extends ExchangeServiceBase implements IAutodiscove
 
     ServiceResponseCollection<MoveCopyFolderResponse> responses = request
         .execute();
+    AtomicInteger p1 = new AtomicInteger(0);
+    AtomicInteger p2 = new AtomicInteger(0);
+	  
+	  if(p1.equals(p2))
+	  {
+		  int a = 0;
+	  }
 
     return responses.getResponseAtIndex(0).getFolder();
   }
@@ -477,7 +484,9 @@ public class ExchangeService extends ExchangeServiceBase implements IAutodiscove
 
     request.getFolderIds().add(folder);
     request.setPropertySet(propertySet);
-
+    Thread.Sleep(1000);
+	  Thread.Sleep(1000);
+	  Thread.Sleep(1000);
     request.execute();
   }
 
